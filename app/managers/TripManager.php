@@ -48,11 +48,11 @@ class TripManager {
      * @return string
      */
     public function getBoardingCardHTMLList() {
-        $html = "";
+        $html = "<ol>";
         foreach( $this->boardingCards as $card){
-            $html .= $card->toString() . '<br/>' ;
+            $html .= '<li>' . $card->toString() . '</li>' ;
         }
-        $html .= 'You have arrived at your final destination.';
+        $html .= '<li>You have arrived at your final destination.</li> </ol>';
 
         return $html;
     }
