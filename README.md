@@ -1,4 +1,4 @@
-# TASK
+## TASK
 
 You are given a stack of boarding cards for various transportations that will take you from a point A to point B via several stops on the way. All of the boarding cards are out of order and you don't know where your journey starts, nor where it ends. Each boarding card contains information about seat assignment, and means of transportation (such as flight number, bus number etc).
 
@@ -16,3 +16,11 @@ Baggage will we automatically transferred from your last leg.
 
 The list should be defined in a format that's compatible with the input format.
 The API is to be an internal PHP API so it will only communicate with other parts of a PHP application, not server to server, nor server to client. Use PHP-doc to document the input and output your API accepts / returns.
+
+## How to install and execute the code
+First of all, Deploy the downloaded code on a hosting directory. Second step is to download all the dependencies. For this purpose, Composer should be already installed into the system or you can download/install from [this](https://getcomposer.org/download/) link.
+Once the composer is installed then execute the below command into the project root directory.
+
+```composer install```
+
+It will download all the dependencies and configure them based on the project requirements. Next you can simply enter the url till project root directory into the web browser and hit enter to see the output.
