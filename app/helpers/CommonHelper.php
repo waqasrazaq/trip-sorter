@@ -1,19 +1,28 @@
 <?php
 namespace TripSorter\Helpers;
 
+/**
+ * Class CommonHelper
+ * @package TripSorter\Helpers
+ */
 class CommonHelper {
 
+    /**
+     * CommonHelper constructor.
+     */
     function __construct() {
 
     }
 
+    /**
+     * @param array $items
+     * @return array
+     */
     public static function sortBoardingCardCollection(array $items) {
         $fromHash = self::createFromLocationHash($items);
         $toHash = self::createToLocationHash($items);
 
-        //self::printHash($toHash);
         $firstStartLocation = self::findFirstStartLocation($items, $toHash);
-
 
         $sortedCollection = array();
         $pointer = $firstStartLocation;
@@ -26,12 +35,13 @@ class CommonHelper {
             }
         }
 
-
         return $sortedCollection;
-
-
     }
 
+    /**
+     * @param $boardingCards
+     * @return array
+     */
     static function createFromLocationHash($boardingCards)
     {
         $fromLocations  = array();
@@ -41,6 +51,10 @@ class CommonHelper {
         return $fromLocations;
     }
 
+    /**
+     * @param $boardingCards
+     * @return array
+     */
     static function createToLocationHash($boardingCards) {
         $toLocations  = array();
         for ($i=0; $i<sizeof($boardingCards); $i++) {
@@ -49,14 +63,11 @@ class CommonHelper {
         return $toLocations;
     }
 
-    private static function printHash($hash){
-        foreach ($hash as $key => $value) {
-            // $arr[3] will be updated with each value from $arr...
-            echo "{$key}";
-
-        }
-    }
-
+    /**
+     * @param $boardingCards
+     * @param $toHash
+     * @return null
+     */
     private static function findFirstStartLocation($boardingCards, $toHash) {
 
         foreach($boardingCards as $boardingCard){
@@ -67,8 +78,5 @@ class CommonHelper {
         }
         return null;
     }
-
-
-
 }
 ?>
