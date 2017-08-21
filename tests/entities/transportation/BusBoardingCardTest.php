@@ -4,7 +4,7 @@ namespace TripSorter\Tests;
 use \TripSorter\Entities\Transportation\BusBoardingCard;
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
-class TrainBoardingCardTest extends \PHPUnit_Framework_TestCase
+class BusBoardingCardTest extends \PHPUnit_Framework_TestCase
 {
     public function testToString()
     {
