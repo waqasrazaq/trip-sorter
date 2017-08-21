@@ -68,7 +68,7 @@ class CommonHelper {
      * @param $toHash
      * @return null
      */
-    private static function findFirstStartLocation($boardingCards, $toHash) {
+    static function findFirstStartLocation($boardingCards, $toHash) {
 
         foreach($boardingCards as $boardingCard){
             $fromLocation = $boardingCard->getFromLocation();
